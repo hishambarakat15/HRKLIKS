@@ -1,53 +1,18 @@
 
-  <div class="container-fluid bw-logos customers-section text-center mt-5">
+  <div class="container bw-logos customers-section text-center mt-5">
     <div class="display-center customers-title-block">
       <h2 class="text-center customers-title ">
         {{ 'CUSTOMERS_SECTION.TITLE' | translate }}      </h2>
       <p class="py-4">{{ 'CUSTOMERS_SECTION.DESCRIPTION' | translate }} </p>
     </div>
-    <div class="col-xs-12 no-padding d-flex flex-wrap justify-content-center">
-    <div class="col-xs-12 col-md-10  d-flex companies-logos d-flex flex-wrap justify-content-center ">
-      <div class="col-xs-4 col-sm-4 col-md-2 logo pt-4 ">
-        <a target="_blank" href="https://deroosak.com/"><img class="img-sle" src="./assets/images/companies/derosaak 2.png" alt="deroosak">
-        </a></div>
-        <div class="col-xs-4 col-sm-4 col-md-2 logo">
-        <a target="_blank" href="https://egyptfoodsgroup.com/"><img class="img-sle" src="./assets/images/companies/egypt food 2.jpg" alt="egypt food">
-        </a></div>
-        <div class="col-xs-4 col-sm-4 col-md-2 logo pt-4">
-        <a target="_blank" href="https://www.ehaf.com/"><img class="img-sle" src="./assets/images/companies/Ehaf.jpeg"  alt="Ehaf">
-        </a></div>
-        <div class="col-xs-4 col-sm-4 col-md-2 logo">
-        <a target="_blank" href="https://www.myvoo.app/"><img class="img-sle" src="./assets/images/companies/voo.jpeg"alt="voo">
-        </a></div>
-       
-        <!-- <div class="col-xs-4 col-sm-4 col-md-2 logo">
-          <a target="_blank" href="https://wagadtoha.com/ar/business/zabthacom"><img class="img-sle" src="../../../assets/images/companies/zabatha.jpeg" alt="zabatha">
-          </a></div> -->
-       
-        
-        <div class="col-xs-4 col-sm-4 col-md-2 logo">
-          <a target="_blank" href="https://www.appseconnect.com/dynamics-link/"><img class="img-sle" src="../../../assets/images/companies/dynamics 22.jpg" alt="dynamics">
-          </a></div>
-          <div class="col-xs-4 col-sm-4 col-md-2 logo pt-5 ">
-            <a target="_blank" href="https://www.albawatches.com/"><img class="img-sle" src="./assets/images/companies/alba.jpeg" alt="alba">
-            </a></div>
-          <div class="col-xs-4 col-sm-4 col-md-2 logo">
-            <a target="_blank" href="https://www.chemipharm.net/"><img class="img-sle" src="./assets/images/companies/chemipharn2.jpeg" alt="chemipharn2">
-            </a></div>
-        <div class="col-xs-4 col-sm-4 col-md-2 logo pt-3">
-        <a target="_blank" href="https://zulficarpartners.com/"><img class="img-sle" src="./assets/images/companies/zulfacar.jpeg" alt="zulfacar">
-        </a></div>
-        <!-- <div class="col-xs-4 col-sm-4 col-md-2 logo">
-          <a target="_blank" href="https://www.weds.co.jp/english/kranze/"><img class="img-sle" src="../../../assets/images/companies/weds.jpeg" alt="weds">
-          </a></div> -->
-        <div class="col-xs-4 col-sm-4 col-md-2 logo">
-        <a target="_blank" href="https://www.afreximbank.com/"><img class="img-sle w-75" src="./assets/images/companies/AFIXM.jpg" alt="AFIXM">
-        </a></div>
-        <div class="col-xs-4 col-sm-4 col-md-2 logo">
-        <a target="_blank" href="https://www.ennabigrill.com/"><img class="img-sle" src="./assets/images/companies/ephedra.jpeg" alt="ephedra">
-        </a></div>
+    <div class="row company-grid">
+      <div *ngFor="let company of companies " class=" col-lg-3 col-md-4 col-6 mb-3 company-item">
+        <a [href]="company.url" target="_blank">
+          <img [src]="company.image" [alt]="company.alt" class="company-logo">
+        </a>
+      </div>
     </div>
-    </div>
+    
     </div>
   
 

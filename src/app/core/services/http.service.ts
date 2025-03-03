@@ -3,23 +3,40 @@ import { inject, Injectable } from "@angular/core";
 import { map, Observable } from "rxjs";
 
 @Injectable({
-    providedIn: 'root',
-  })
-  export class HttpService {
-    private baseUrl = 'http://services.hrklix.com/';
+  providedIn: 'root',
+})
+export class HttpService {
+  private baseUrl = 'http://services.hrklix.com/';
 
-  private readonly _httpClient  = inject(HttpClient);
-  
+  private readonly _httpClient = inject(HttpClient);
+
   createTenant(payload: any): Observable<string> {
     return this._httpClient
-      .post(`${this.baseUrl}Tenant/CreateTenant`, payload, { responseType: 'text' })
+      .post(`${this.baseUrl}Tenant/CreateTenant`, payload, {
+        responseType: 'text',
+      })
       .pipe(
         map((response: string) => {
-          const match = response.match(/Tenant .*? registered successfully.*? on port \d+/);
+          const match = response.match(
+            /Tenant .*? registered successfully.*? on port \d+/
+          );
           return match ? match[0] : 'Unknown response format';
         })
       );
   }
 
-
+  contactUsTenant(payload: any): Observable<string> {
+    return this._httpClient
+      .post(`${this.baseUrl}tenant/ContactUs`, payload, {
+        responseType: 'text',
+      })
+      .pipe(
+        map((response: string) => {
+          const match = response.match(
+            /Tenant .*? registered successfully.*? on port \d+/
+          );
+          return match ? match[0] : 'Unknown response format';
+        })
+      );
   }
+}
