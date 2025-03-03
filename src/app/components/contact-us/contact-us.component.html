@@ -1,0 +1,227 @@
+
+  <div id="contact" class="contact-us section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7">
+          <div class="section-heading">
+            <h2>{{ 'CONTACT.HEADING1' | translate }} <em>{{ 'CONTACT.HEADING2' | translate }} </em> {{ 'CONTACT.HEADING3' | translate }} </h2>
+            <div id="map">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d215.82395324863862!2d31.358645611145395!3d30.06028129189551!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583db3e97ba115%3A0x7363b6c8dd93a7c7!2sLinked%20Gates!5e0!3m2!1sar!2seg!4v1648386735275!5m2!1sar!2seg" width="100%" height="400px" style="border:0;" allowfullscreen=""></iframe>
+            </div>
+            <div class="info">
+              <span><i class="fa fa-phone"></i> <a href="tel:01002280042">{{ 'CONTACT.PHONE' | translate }}</a></span>
+              <span><i class="fa fa-envelope"></i> <a href="mailto:{{ 'CONTACT.EMAIL' | translate }}">{{ 'CONTACT.EMAIL' | translate }}</a></span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 align-self-center">
+          <form [formGroup]="contactUsForm" (ngSubmit)="contactUsSubmit()" id="contact">
+            <div class="row">
+              <div class="col-md-6">
+                <input
+                type="text"
+                formControlName="FirstName"
+                placeholder="{{ 'LogIn.FORM.First_Name' | translate }}" [ngClass]="{
+                  'is-valid': !contactUsForm.get('FirstName')?.errors && (contactUsForm.get('FirstName')?.touched ||contactUsForm.get('FirstName')?.dirty),
+                  'is-invalid':contactUsForm.get('FirstName')?.errors && (contactUsForm.get('FirstName')?.touched ||contactUsForm.get('FirstName')?.dirty) 
+              }"
+                
+              />@if (contactUsForm.get('FirstName')?.errors && (contactUsForm.get('FirstName')?.touched ||contactUsForm.get('FirstName')?.dirty) ) 
+              {
+              <div class="alert alert-danger">
+                 
+                      @if (contactUsForm.get('FirstName')?.getError('required')) {
+                        <p>{{ 'LogIn.FORM.VALIDATE_FN_ISREQUITRED' | translate }}</p>
+                      }
+                    
+                      
+                  
+              </div>
+          }
+              </div>
+              <div class="col-md-6">
+                <input
+                type="text"
+                formControlName="LastName"
+                placeholder="{{ 'LogIn.FORM.Last_Name' | translate }}" [ngClass]="{
+                  'is-valid': !contactUsForm.get('LastName')?.errors && (contactUsForm.get('LastName')?.touched ||contactUsForm.get('LastName')?.dirty),
+                  'is-invalid':contactUsForm.get('LastName')?.errors && (contactUsForm.get('LastName')?.touched ||contactUsForm.get('LastName')?.dirty) 
+              }"
+                
+              />@if (contactUsForm.get('LastName')?.errors && (contactUsForm.get('LastName')?.touched ||contactUsForm.get('LastName')?.dirty) ) 
+              {
+              <div class="alert alert-danger">
+                 
+                      @if (contactUsForm.get('LastName')?.getError('required')) {
+                        <p>{{ 'LogIn.FORM.VALIDATE_LN_ISREQUITRED' | translate }}</p>                      }
+                    
+                      
+                  
+              </div>
+          }
+              </div>
+              <div class="col-md-12">
+                <input
+                type="text"
+                formControlName="JobTitle"
+                placeholder="{{ 'LogIn.FORM.job_Title' | translate }}" [ngClass]="{
+                  'is-valid': !contactUsForm.get('JobTitle')?.errors && (contactUsForm.get('JobTitle')?.touched ||contactUsForm.get('JobTitle')?.dirty),
+                  'is-invalid':contactUsForm.get('JobTitle')?.errors && (contactUsForm.get('JobTitle')?.touched ||contactUsForm.get('JobTitle')?.dirty) 
+              }"
+                
+              />@if (contactUsForm.get('JobTitle')?.errors && (contactUsForm.get('JobTitle')?.touched ||contactUsForm.get('JobTitle')?.dirty) ) 
+              {
+              <div class="alert alert-danger">
+                 
+                      @if (contactUsForm.get('JobTitle')?.getError('required')) {
+                        <p>{{ 'LogIn.FORM.VALIDATE_JT_ISREQUITRED' | translate }}</p>
+                      }
+                    
+                      
+                  
+              </div>
+          }
+              </div>
+              <div class="col-lg-12">
+                  <input
+                    type="text"
+                    formControlName="CompanyName"
+                    placeholder="{{ 'LogIn.FORM.COMPANY-NAME' | translate }}" [ngClass]="{
+                      'is-valid': !contactUsForm.get('CompanyName')?.errors && (contactUsForm.get('CompanyName')?.touched ||contactUsForm.get('CompanyName')?.dirty),
+                      'is-invalid':contactUsForm.get('CompanyName')?.errors && (contactUsForm.get('CompanyName')?.touched ||contactUsForm.get('CompanyName')?.dirty) 
+                  }"
+                    
+                  />@if (contactUsForm.get('CompanyName')?.errors && (contactUsForm.get('CompanyName')?.touched ||contactUsForm.get('CompanyName')?.dirty) ) 
+                  {
+                  <div class="alert alert-danger">
+                     
+                          @if (contactUsForm.get('CompanyName')?.getError('required')) {
+                            <p>{{ 'LogIn.FORM.VALIDATE_CN_ISREQUITRED' | translate }}</p>
+                          }
+                          @else if (contactUsForm.get('CompanyName')?.getError('minlenth')) {
+                            <p>{{ 'LogIn.FORM.VALIDATE_CN_MORETHAN' | translate }}</p>
+                          }
+                          @else if (contactUsForm.get('CompanyName')?.getError('maxlength')) {
+                            <p>{{ 'LogIn.FORM.VALIDATE_CN_LESSTHAN' | translate }}</p>
+                          }
+                          
+                      
+                  </div>
+              }
+              </div>
+       
+              <div class="col-lg-12">
+              
+                  <input
+                    type="email"
+                    formControlName="email"
+                    placeholder="{{ 'LogIn.FORM.EMAIL' | translate }}"
+                    [ngClass]="{
+                      'is-valid': !contactUsForm.get('email')?.errors && (contactUsForm.get('email')?.touched ||contactUsForm.get('email')?.dirty),
+                      'is-invalid':contactUsForm.get('email')?.errors && (contactUsForm.get('email')?.touched ||contactUsForm.get('email')?.dirty) 
+                  }"/>
+                    @if (contactUsForm.get('email')?.errors && contactUsForm.get('email')?.touched) 
+                    {
+                    <div class="alert alert-danger">
+                       
+                            @if (contactUsForm.get('email')?.getError('required')) {
+                              <p>{{ 'LogIn.FORM.VALIDATE_BE_ISREQUITRED' | translate }}</p>
+                            }
+                           
+                            @if (contactUsForm.get('email')?.getError('email')) {
+                              <p>{{ 'LogIn.FORM.VALIDATE_BE_ISVALID' | translate }}</p>
+                            }
+  
+            
+                    </div>
+                }
+                  
+              </div>
+            <div class="row">
+              <div class="col-lg-5">
+                <select
+                  class="form-control font-size-11 mb-3 cr h-50 pt-1"
+                  formControlName="CountryCode"
+                >
+                  <option value="" >{{ 'LogIn.FORM.COUNTRY-CODE' | translate }}</option>
+                  <option value="+962">Jordan (+962)</option>
+                  <option value="+966">Saudi Arabia (+966)</option>
+                  <option value="+970">Palestine (+970)</option>
+                  <option value="+974">Qatar (+974)</option>
+                  <option value="+961">Lebanon (+961)</option>
+                  <option value="+965">Kuwait (+965)</option>
+                  <option value="+218">Libya (+218)</option>
+                  <option value="+249">Sudan (+249)</option>
+                  <option value="+963">Syria (+963)</option>
+                  <option value="+65">Singapore (+65)</option>
+                  <option value="+20">Egypt (+20)</option>
+                  <option value="+971">United Arab Emirates (+971)</option>
+                  <option value="+968">Oman (+968)</option>
+                  <option value="+213">Algeria (+213)</option>
+                  <option value="+216">Tunisia (+216)</option>
+                  <option value="+212">Morocco (+212)</option>
+                  <option value="+964">Iraq (+964)</option>
+                  <option value="+967">Yemen (+967)</option>
+                  <option value="+973">Bahrain (+973)</option>
+                </select>
+            </div>
+              <div class="col-lg-7">
+                <input type="tel" name="phone"  id="phone"
+                 formControlName="PhoneNumber"
+                [placeholder]="'LogIn.FORM.PHONE-NUMBER' | translate" autocomplete="on"  [ngClass]="{
+                  'is-valid': !contactUsForm.get('PhoneNumber')?.errors && (contactUsForm.get('PhoneNumber')?.touched ||contactUsForm.get('PhoneNumber')?.dirty),
+                  'is-invalid':contactUsForm.get('PhoneNumber')?.errors && (contactUsForm.get('PhoneNumber')?.touched ||contactUsForm.get('PhoneNumber')?.dirty) 
+              }">
+              @if (contactUsForm.get('PhoneNumber')?.errors && contactUsForm.get('PhoneNumber')?.touched) 
+              {
+              <div class="alert alert-danger">
+                 
+                      @if (contactUsForm.get('PhoneNumber')?.getError('required')) {
+                        <p>{{ 'LogIn.FORM.VALIDATION_PN_ISREQUITRED' | translate }}</p>
+                      }
+                      @else if (contactUsForm.get('PhoneNumber')?.getError('pattern')) {
+                        <p>{{ 'LogIn.FORM.VALIDATION_PN_ISVALID' | translate }}</p>
+                      }
+  
+              </div>
+          }
+            </div>
+  
+            </div>
+            
+            
+              <div class="col-lg-12">
+                  <button [disabled]="contactUsForm.invalid" type="submit"  class="main-button cr">
+                    {{ 'LogIn.FORM.SUBMIT' | translate }}
+                    
+                  </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="contact-dec">
+      <img src="../../../assets/images/contact-dec.png" alt="contact-dec">
+    </div>
+    <div class="contact-left-dec">
+      <img src="../../../assets/images/contact-left-dec.png" alt="contact-left-dec">
+    </div>
+  </div>
+  
+
+  
+<p-dialog header="HRKLIX.com says" [modal]="true" [(visible)]="visible" [style]="{ width: '30%' }">
+  <div class="p-5">
+    <span class="p-text-secondary block mb-5">{{'LogIn.CONTACT_US_DIALOG_MSG' | translate}}</span>
+      
+
+      <div class="d-flex justify-content-end mt-5">
+        <button type="button"(click)="visible = false"  class="btn btn-secondary"> {{'LogIn.OK' | translate}} </button>
+      </div>
+  </div>
+ 
+
+
+
+</p-dialog>

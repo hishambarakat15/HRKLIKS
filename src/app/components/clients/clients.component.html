@@ -1,0 +1,37 @@
+<section>
+  <div id="Clients" class="our-Clients section">
+    <div class="Clients-left-dec">
+      <img src="../../../assets/images/portfolio-left-dec.png" alt="portfolio-left-dec">
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="section-heading">
+          <h2 class="h1">{{ 'CLIENTS_SECTION.TITLE' | translate }}</h2>
+          <p class="pt-3">{{ 'CLIENTS_SECTION.DESCRIPTION' | translate }}</p>
+        </div>
+      </div>
+      <owl-carousel-o [options]="customOptions" class="owl-Clients">
+        <ng-container *ngFor="let client of clients">
+          <ng-template carouselSlide>
+            <div class="item mt-5">
+              <div class="thumb">
+                <div class="d-flex justify-content-center">
+                  <img [src]="client.image" class="w-25" [alt]="client.name">
+                </div>
+                <div class="item">
+                  <p class="text-center">{{ client.feedback | translate }}</p>
+                </div>
+                <div class="inner-content pt-4 mt-2 text-center">
+                  <a rel="sponsored" href="" target="_parent">
+                    <h4 class="text-center py-2">{{ client.name | translate }}</h4>
+                  </a>
+                  <span class="text-center mt-2">{{ client.role | translate }}</span>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+        </ng-container>
+      </owl-carousel-o>
+    </div>
+  </div>
+</section>

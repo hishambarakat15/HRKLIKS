@@ -1,0 +1,58 @@
+ <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-fixed main-nav" [ngClass]="{'scrolled': isScrolled}"(isEnglish)="isEnglish">
+    <div class="container-fluid">
+      <a class="navbar-brand logo cr logo-img"  [routerLink]="['/home']">
+            <img src="../../../assets/images/Asset 22 (3).png" class="logo-img
+            mx-5 mt-0 " alt="LinkedHR__4">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav nav justify-content-between">
+          <li class="nav-item ">
+            <!-- [routerLink]="['/OurSoftware']" routerLinkActive="active-link" fragment="OurSoftware" -->
+            <a class="nav-link px-4 cr"  [routerLink]="['/']" fragment="OurSoftware">{{'navbar.Our_Software'|translate}}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-4 cr"[routerLink]="['/']" fragment="Service">{{'navbar.Services'|translate}}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-4 cr" [routerLink]="['/']" fragment="WhyHrklix">{{'navbar.Why_HRKLIX?'|translate}}</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              {{"navbar.lang"|translate}}
+            </a>
+            <ul class="dropdown-menu">
+              <li><a [class.bg.info]="_TranslateService.currentLang=='en'" class="dropdown-item cr" (click)="changeLang('en')">en</a></li>
+              <li><a [class.bg.info]="_TranslateService.currentLang=='ar'" class="dropdown-item cr"(click)="changeLang('ar')">ar</a></li>
+
+            </ul>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link px-4 cr" routerLinkActive="active-link" (click)="changeLang('ar')"  >{{ isEnglish ? 'العربية' : 'English' }}</a>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link px-4 cr" [routerLink]="['/LogIn']"  routerLinkActive="active-link" >{{'navbar.Live_Demo'|translate}}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-4 cr" (click)="openLiveDemo()" routerLinkActive="active-link" >{{'navbar.LogIn'|translate}}</a>
+          </li>
+          <li><div class="main-red-button-hover px-4 cr">
+
+            <a [routerLink]="['/']" fragment="Contact_Us" >{{'navbar.Contact_Us'|translate}}</a>
+          </div>
+         </li>
+         <!-- <li><div class="main-red-button-hover px-4 cr">
+
+          <a [routerLink]="['/LogIn']" routerLinkActive="active-link" >{{'navbar.LogIn'|translate}}</a>
+        </div>
+       </li> -->
+       
+        </ul>
+
+      </div>
+    </div>
+  </nav> 
+ 
+ 

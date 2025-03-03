@@ -1,0 +1,63 @@
+<section class="">
+     <div class="main-banner" id="top">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="row">
+                <div class="col-lg-6 ">
+                    <owl-carousel-o [options]="customOptions" class="px-0">
+                        <ng-template carouselSlide>
+                          <div class="item header-text">
+                            <h6>{{'CAROUSEL.SLIDE1.TITLE'|translate}} </h6>
+                            <h2><em>{{'CAROUSEL.SLIDE1.HEADING1'|translate}}  </em> {{'CAROUSEL.SLIDE1.HEADING2'|translate}}<span> {{'CAROUSEL.SLIDE1.HEADING3'|translate}}</span></h2>
+                            <p>{{'CAROUSEL.SLIDE1.DESCRIPTION'|translate}}</p>
+                            <div class="down-buttons">
+                              <div class="main-blue-button-hover">
+                                <a href="#contact">{{'CAROUSEL.SLIDE1.BUTTON1'|translate}}</a>
+                              </div>
+                              <div class="call-button">
+                                <a href="tel:0101097755177"><i class="fa fa-phone"></i> {{'CAROUSEL.SLIDE1.PHONE'|translate}}</a>
+                              </div>
+                            </div>
+                          </div></ng-template>  
+                        <ng-template carouselSlide> 
+                          <div class="item header-text">
+                            <h6>{{'CAROUSEL.SLIDE2.TITLE'|translate}}</h6>
+                            <h2><em>{{'CAROUSEL.SLIDE2.HEADING1'|translate}}</em> {{'CAROUSEL.SLIDE2.HEADING2'|translate}} <span>{{'CAROUSEL.SLIDE2.HEADING3'|translate}}</span></h2>
+                            <p>{{'CAROUSEL.SLIDE2.DESCRIPTION'|translate}}
+                            </p>
+                            <div class="down-buttons">
+                              <div class="main-blue-button-hover">
+                                <a href="#services">{{'CAROUSEL.SLIDE2.BUTTON1'|translate}}</a>
+                              </div>
+                              <div class="call-button">
+                                <a href="tel:01002280042"><i class="fa fa-phone"></i> {{'CAROUSEL.SLIDE2.PHONE'|translate}}</a>
+                              </div>
+                            </div>
+                          </div></ng-template>  
+                        <ng-template carouselSlide>
+                          <div class="item header-text">
+                            <h6>{{'CAROUSEL.SLIDE3.TITLE'|translate}}</h6>
+                            <h2>{{'CAROUSEL.SLIDE3.HEADING1'|translate}} <em>{{'CAROUSEL.SLIDE3.HEADING2'|translate}}</em> {{'CAROUSEL.SLIDE3.HEADING3'|translate}}</h2>
+                            <p>{{'CAROUSEL.SLIDE3.DESCRIPTION'|translate}}</p>
+                            <div class="down-buttons">
+                              <div class="main-blue-button-hover">
+                                <a [routerLink]="['/LogIn']">{{'CAROUSEL.SLIDE3.BUTTON1'|translate}}</a>
+                              </div>
+                              <div class="call-button">
+                                <a href="tel:01097755177"><i class="fa fa-phone"></i> {{'CAROUSEL.SLIDE3.PHONE'|translate}}</a>
+                              </div>
+                            </div>
+                          </div></ng-template>  
+                      </owl-carousel-o>
+                </div>
+                <div class="col-lg-6 align-self-center">
+                  <img src="" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+</section>

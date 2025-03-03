@@ -1,0 +1,71 @@
+<section>
+    <div class="container  mt-5 ">
+        <div class="row detw">
+        <h2 class=" mt-9 mb-5 d-block w-100 text-center">{{'MOBILE_APP.TITLE'|translate}}</h2>
+    
+
+          <div class="col-md-3 col-xs-12 col-md-offset-1 carousel">
+            <!-- <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div *ngFor="let image of images; let i = index" class="carousel-item" [ngClass]="{'active': i === 0}">
+                  <img [src]="image" class="d-block w-100" alt="Image {{i + 1}}">
+                </div>
+              </div>
+              </div> -->
+              <owl-carousel-o [options]="carouselOptions">
+  <ng-container *ngFor="let image of images">
+    <ng-template carouselSlide>
+      <img [src]="image" class="img-fluid" alt="Image">
+    </ng-template>
+  </ng-container>
+</owl-carousel-o>
+          </div>
+
+
+        <div class="col-md-8 col-xs-12 col-md-offset-1  ">
+          <h2 class="d-md-block d-none">{{'MOBILE_APP.ESS_TITLE'|translate}}</h2>
+          <h3 class="dark-blue-grey-text  ess-section-description mt-5">{{'MOBILE_APP.ESS_SUBTITLE'|translate}}</h3>
+          <br>
+          <div class="benefits-list">
+            <div class="d-flex flex-wrap benefits-item">
+              <!-- <div class="d-flex justify-content-sm-center">
+                <i class="fa-solid fa-wallet iced"></i>
+              </div> -->
+            <div class="d-flex justify-content-sm-center">
+              <i class="fa-solid fa-wallet iced"></i>
+              <p class="pt-4">{{'MOBILE_APP.BENEFITS.PROFILE_MANAGEMENT'|translate}}</p>
+            </div>
+          </div>
+          <div class="d-flex flex-wrap benefits-item">
+            <!-- <div class="d-flex justify-content-sm-center">
+              <i class="fa-solid fa-location-dot iced"></i>
+            </div> -->
+            <div class="d-flex justify-content-sm-center">
+              <i class="fa-solid fa-location-dot iced"></i>
+              <p class="pt-4">{{'MOBILE_APP.BENEFITS.COMMUNICATION'|translate}}</p>
+            </div>
+          </div>
+         
+          <div class="d-flex flex-wrap benefits-item">
+            <!-- <div class="d-flex justify-content-sm-center">
+              <i class="fa-solid fa-clock iced"></i>
+            </div> -->
+            <div class="d-flex justify-content-sm-center">
+              <i class="fa-solid fa-clock iced"></i>
+              <p class="pt-4">{{'MOBILE_APP.BENEFITS.KEY_FEATURES'|translate}}</p>
+            </div>
+          </div>
+        </div>
+        <div class="store-badges  d-flex justify-content-sm-center justify-content-md-start">
+          <div class="display-center app">
+            <a target="_blank" href="https://play.google.com/store/apps/details?id=com.asia.linked_hr&hl=en_US&gl=US"><img src="https://d2is554mdy16bu.cloudfront.net/assets/store-links/google-play-badge-b970ebd6740e54d208f143b84a2749143b011fac98f543141e3eadfad041483a.png">
+            </a>
+            <a target="_blank" href="https://play.google.com/store/apps/details?id=com.asia.linked_hr&hl=en_US&gl=US"><img class="app-download" src="https://d2is554mdy16bu.cloudfront.net/assets/store-links/app-store-badge-eeb669f88fa1d1fb50696602c947ee4df08fb4fb94643ca5c2fe1dbc41311842.png">
+            </a>
+          </div>
+        </div>
+      
+      </div>
+      </div>
+      </div> 
+</section>

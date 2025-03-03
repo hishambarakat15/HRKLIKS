@@ -1,0 +1,26 @@
+owl-carousel-o {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  img {
+    width: 100%;
+    border-radius: 10px;
+
+    // media queries for small screens
+    @media (max-width: 600px) {
+      width: 350px !important
+
+    }
+  }
+
+  .display-center{
+    width: 180px;
+  }
+
+  @media only screen and (max-width: 768px) {
+.mt-9{
+margin-top: 20px !important;
+}}
