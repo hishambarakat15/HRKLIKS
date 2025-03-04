@@ -26,17 +26,18 @@ export class HttpService {
   }
 
   contactUsTenant(payload: any): Observable<string> {
-    return this._httpClient
-      .post(`${this.baseUrl}tenant/ContactUs`, payload, {
+    return this._httpClient.post(`${this.baseUrl}tenant/ContactUs`, payload, {
+      responseType: 'text',
+    });
+  }
+
+  createSubscription(payload: any): Observable<string> {
+    return this._httpClient.post(
+      `${this.baseUrl}tenant/Subscribe`,
+      payload,
+      {
         responseType: 'text',
-      })
-      .pipe(
-        map((response: string) => {
-          const match = response.match(
-            /Tenant .*? registered successfully.*? on port \d+/
-          );
-          return match ? match[0] : 'Unknown response format';
-        })
-      );
+      }
+    );
   }
 }

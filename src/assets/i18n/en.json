@@ -1,23 +1,22 @@
 {
-    "APP_TITLE": "Hrklix",
-    "navbar":{
-        "My_Home":"Home",
-        "Our_Software":"Our Software",
-        "Services":"Services",
-        "Why_HRKLIX?":"Why HRKLIX?",
-        "lang" :"العربيه",
-        "Contact_Us": "Request Live Demo",
-        "Live_Demo": "Freemium",
-        "LogIn": "Log in"
-    },
-   
-    "CAROUSEL": {
+  "APP_TITLE": "Hrklix",
+  "navbar": {
+    "My_Home": "Home",
+    "Our_Software": "Overview",
+    "Services": "Features",
+    "Why_HRKLIX?": "Why HRKLIX?",
+    "lang": "العربيه",
+    "Contact_Us": "Request Live Demo",
+    "Live_Demo": "Freemium",
+    "LogIn": "Log in"
+  },
+
+  "CAROUSEL": {
     "SLIDE1": {
       "TITLE": "Welcome to HRKLIX",
       "HEADING1": "WHO",
       "HEADING2": "we",
       "HEADING3": "are?",
-
 
       "DESCRIPTION": "HRKLIX is an intuitive human resource management platform designed to simplify employee administration. From attendance tracking to payroll and leave management, we provide all the tools your business needs to stay organized and efficient. Empower your team with streamlined HR processes and focus on driving success.",
       "BUTTON1": "Contact Us Now",
@@ -43,14 +42,13 @@
       "BUTTON1": "Freemium",
       "PHONE": "+201097755177"
     }
-    },
-    "SERVICES": {
-    
+  },
+  "SERVICES": {
     "HEADING1": "Explore",
     "HEADING2": "the key benefits",
 
-      "HEADING3": "of our",
-      "HEADING4": "System",
+    "HEADING3": "of our",
+    "HEADING4": "System",
 
     "ITEMS": {
       "EMPLOYEE_PROFILE": {
@@ -101,56 +99,57 @@
     "DESCRIPTION": "Our numbers speak for themselves—join countless satisfied clients who have transformed their HR processes with HRKLIX.",
     "FACTS": {
       "EMPLOYEES": {
-        "DIGIT": "320",
+        "DIGIT": "5000",
         "TITLE": "Number of  Employees...",
         "DESCRIPTION": "Join a growing community that relies on HRKLIX for efficient workforce management and seamless HR operations."
       },
       "DAILY_REQUESTS": {
-        "DIGIT": "640",
+        "DIGIT": "10000",
         "TITLE": "Number of Daily Requests...",
         "DESCRIPTION": "Experience the power of automation as we streamline HR tasks, allowing your team to focus on what truly matters."
       },
       "TRANSACTIONS": {
-        "DIGIT": "120",
+        "DIGIT": "50000",
         "TITLE": "Number of Transactions...",
         "DESCRIPTION": "With HRKLIX, you can ensure accuracy and efficiency in every transaction, enhancing your overall HR experience."
       }
     }
   },
   "LogIn": {
-        "TITLE": "Log In",
-        "SUB-TITLE1": "Just one step away!",
-        "SUB-TITLE2": "Sign up now to access HRKLIX’s Freemium, the ultimate personalized HR management solution.",
-        "LOGIN_DIALOG_MSG":"Your Freemium account has been successfully created! Your login details have been sent to the email address you provided",
-        "CONTACT_US_DIALOG_MSG":"Thank you for reaching out! Your request has been submitted successfully. We will get back to you as soon as possible.",
-        "OK":"Close ",
-        "FORM": {
-          "First_Name":"First Name",
-          "Last_Name":"Last Name",
-          "COMPANY-NAME": "Company Name",
-          "job_Title":"Job Title",
-          "BUSINESS-EMAIL": "Business Email",
-          "EMAIL":"Email",
-          "PHONE-NUMBER": "Phone Number",
-          "ADMIN-PASSWORD": "Admin Password",
-          "COMPANY-SIZE": "Company Size",
-          "No_Of_emp":"Number of employees",
-          "COUNTRY-CODE":"Country Code:",
-          "SUBMIT": "Submit Request",
-          "VALIDATE_FN_ISREQUITRED": "First Name is required",
-          "VALIDATE_LN_ISREQUITRED": "Last Name is required",
-          "VALIDATE_CN_ISREQUITRED": "Company Name is required",
-          "VALIDATE_CN_MORETHAN": "Company Name should be more than 3 characters",
-          "VALIDATE_CN_LESSTHAN": "CompanyName should less than 20 characters",
-          "VALIDATE_JT_ISREQUITRED": "Job Title is required",
-          "VALIDATE_BE_ISREQUITRED": "Business Email is required",
-          "VALIDATE_BE_ISVALID": "Please enter a valid business email",
-          "VALIDATION_NOE_ISREQUITRED": "Number of employees is required",
-          "VALIDATION_PN_ISREQUITRED": "Phone Number is required",
-          "VALIDATION_PN_ISVALID": "Please enter a valid phone number"
-
-        }
-      },
+    "TITLE": "Log In",
+    "SUB-TITLE1": "Just one step away!",
+    "SUB-TITLE2": "Sign up now to access HRKLIX’s Freemium, the ultimate personalized HR management solution.",
+    "LOGIN_DIALOG_MSG": "Your Freemium account has been successfully created! Your login details have been sent to the email address you provided",
+    "CONTACT_US_DIALOG_MSG": "Thank you for reaching out! Your request has been submitted successfully. We will get back to you as soon as possible.",
+    "OK": "Close ",
+    "FORM": {
+      "First_Name": "First Name",
+      "Last_Name": "Last Name",
+      "COMPANY-NAME": "Company Name",
+      "SUBJECT": "Subject",
+      "job_Title": "Job Title",
+      "BUSINESS-EMAIL": "Business Email",
+      "EMAIL": "Email",
+      "PHONE-NUMBER": "Phone Number",
+      "ADMIN-PASSWORD": "Admin Password",
+      "COMPANY-SIZE": "Company Size",
+      "No_Of_emp": "Number of employees",
+      "COUNTRY-CODE": "Country Code:",
+      "SUBMIT": "Submit Request",
+      "VALIDATE_FN_ISREQUITRED": "First Name is required",
+      "VALIDATE_LN_ISREQUITRED": "Last Name is required",
+      "VALIDATE_CN_ISREQUITRED": "Company Name is required",
+      "VALIDATE_CN_MORETHAN": "Company Name should be more than 3 characters",
+      "VALIDATE_CN_LESSTHAN": "CompanyName should less than 20 characters",
+      "VALIDATE_JT_ISREQUITRED": "Job Title is required",
+      "VALIDATE_BE_ISREQUITRED": "Business Email is required",
+      "VALIDATE_BE_ISVALID": "Please enter a valid business email",
+      "VALIDATION_NOE_ISREQUITRED": "Number of employees is required",
+      "VALIDATION_PN_ISREQUITRED": "Phone Number is required",
+      "VALIDATION_PN_ISVALID": "Please enter a valid phone number",
+      "VALIDATION_SB_ISREQUITRED": "Subject is required"
+    }
+  },
   "MOBILE_APP": {
     "TITLE": "Download the HRKLIX Management App Today",
     "ESS_TITLE": "HRKLIX's Employee Self-Service (ESS) Mobile App",
@@ -170,49 +169,54 @@
       "APP_STORE_IMAGE": "https://d2is554mdy16bu.cloudfront.net/assets/store-links/app-store-badge-eeb669f88fa1d1fb50696602c947ee4df08fb4fb94643ca5c2fe1dbc41311842.png"
     }
   },
-  
-    "HRKLIX_IN_ACTION": "HRKLIX IN ACTION",
-    "PROJECT_ONE": {
-      "TITLE": "Project One",
-      "DESCRIPTION": "ESS & app"
-    },
-    "PROJECT_TWO": {
-      "TITLE": "Second Project",
-      "DESCRIPTION": "& Employee"
-    },
-    "PROJECT_THREE": {
-      "TITLE": "Project Three",
-      "DESCRIPTION": "& Attendance"
-    },
-    "PROJECT_FOUR": {
-      "TITLE": "Fourth Project",
-      "DESCRIPTION": "& Reports"
-    },
-  
-  
-    
-      "CLIENTS_SECTION": {
-        "TITLE": "Hear It From Our Clients",
-        "DESCRIPTION": "Choose HRKLIX for a hassle-free HR solution",
-        "CLIENTS": [
-          {
-            "FEEDBACK": "HRKLIX made our HR processes seamless and efficient.",
-            "NAME": "John Doe",
-            "ROLE": "HR Manager"
-          },
-          {
-            "FEEDBACK": "The platform's intuitive interface is a game changer.",
-            "NAME": "Jane Smith",
-            "ROLE": "CEO"
-          },
-          {
-            "FEEDBACK": "Leave management has never been this easy.",
-            "NAME": "Michael Brown",
-            "ROLE": "Operations Manager"
-          }
-        ]
+  "MODULES": {
+    "EM_TITLE": "Employee Management",
+    "EM_DESCRIPTION": "HRKLIX’s employee management module keeps all staff information in one place for easy access. HR teams can update records, track leave, manage work status, organize shifts, and store important documents. This system helps businesses stay organized and make better decisions by keeping everything in one platform.",
+    "AT_TITLE": "Attendance",
+    "AT_DESCRIPTION": "HRKLIX’s attendance system uses GPS and facial recognition to track employees accurately. It automates lateness deductions, supports different attendance policies, and works for remote and multi-location teams. This reduces manual work and makes attendance tracking easier and more reliable.",
+    "PR_TITLE": "Payroll",
+    "PR_DESCRIPTION": "HRKLIX makes payroll simple by automatically calculating salaries based on attendance, benefits, deductions, and loans. Employees can request advances or loans, with payments adjusted in their payslips. The system also tracks expenses and generates financial reports, helping businesses manage payroll and finances in one place."
+  },
+  "HRKLIX_IN_ACTION": "HRKLIX IN ACTION",
+  "PROJECT_ONE": {
+    "TITLE": "Project One",
+    "DESCRIPTION": "ESS & app"
+  },
+  "PROJECT_TWO": {
+    "TITLE": "Second Project",
+    "DESCRIPTION": "& Employee"
+  },
+  "PROJECT_THREE": {
+    "TITLE": "Project Three",
+    "DESCRIPTION": "& Attendance"
+  },
+  "PROJECT_FOUR": {
+    "TITLE": "Fourth Project",
+    "DESCRIPTION": "& Reports"
+  },
+
+  "CLIENTS_SECTION": {
+    "TITLE": "Hear It From Our Clients",
+    "DESCRIPTION": "Choose HRKLIX for a hassle-free HR solution",
+    "CLIENTS": [
+      {
+        "FEEDBACK": "HRKLIX made our HR processes seamless and efficient.",
+        "NAME": "John Doe",
+        "ROLE": "HR Manager"
       },
-    
+      {
+        "FEEDBACK": "The platform's intuitive interface is a game changer.",
+        "NAME": "Jane Smith",
+        "ROLE": "CEO"
+      },
+      {
+        "FEEDBACK": "Leave management has never been this easy.",
+        "NAME": "Michael Brown",
+        "ROLE": "Operations Manager"
+      }
+    ]
+  },
+
   "CUSTOMERS_SECTION": {
     "TITLE": "Already Endorsed by Leading Companies",
     "DESCRIPTION": "Join the ranks of organizations that trust us for their HR solutions.",
@@ -259,84 +263,110 @@
       }
     ]
   },
-  
-  
-    "PRICING": {
-      "TITLE": "You know better, Customize your plans",
-      "DESCRIPTION": "Choose number of employees to be reflected on the products below, you will check the difference of quotas for each product.",
-      "PACKAGES": {
-        "FERMIUM": {
-          "TITLE": "Fermium Package",
-          "EMPLOYEES": "12 employee",
-          "PRICE": "Free",
-          "FEATURES": ["Employee", "Time Sheet", "Vacations", "Payroll", "Essmobile App"],
-          "BUTTON": "Buy Now"
-        },
-        "STARTER": {
-          "TITLE": "Starter Package",
-          "EMPLOYEES": "50 employee",
-          "PRICE": "$120",
-          "FEATURES": ["Employee", "Time Sheet", "Vacations", "Payroll", "Essmobile App"],
-          "BUTTON": "Buy Now"
-        },
-        "MEDIUM": {
-          "TITLE": "Medium Package",
-          "EMPLOYEES": "100 employee",
-          "PRICE": "$200",
-          "FEATURES": ["Employee", "Time Sheet", "Vacations", "Payroll", "Essmobile App"],
-          "BUTTON": "Buy Now"
-        },
-        "PREMIUM": {
-          "TITLE": "Premium Package",
-          "EMPLOYEES": "+100 employee",
-          "PRICE": "$....",
-          "FEATURES": ["Employee", "Time Sheet", "Vacations", "Payroll", "Essmobile App"],
-          "BUTTON": "Contact Us"
-        }
-      }
-      
-    },
-    
-      "CONTACT": {
-        "HEADING1": "Feel free to",
-        "HEADING2": "Contact",
 
-        "HEADING3": " us",
-
-        "ADDRESS": "Linked Gates",
-        "PHONE": "+201097755177",
-        "EMAIL": "sales@hrklix.com",
-        "FORM": {
-          "NAME": "Name",
-          "SURNAME": "Surname",
-          "EMAIL": "Your Email",
-          "WEBSITE": "Your Website URL",
-          "SUBMIT": "Submit Request"
-        }
+  "PRICING": {
+    "TITLE": "You know better, Customize your plans",
+    "DESCRIPTION": "Choose number of employees to be reflected on the products below, you will check the difference of quotas for each product.",
+    "PACKAGES": {
+      "FERMIUM": {
+        "TITLE": "Fermium Package",
+        "EMPLOYEES": "12 employee",
+        "PRICE": "Free",
+        "FEATURES": [
+          "Employee",
+          "Time Sheet",
+          "Vacations",
+          "Payroll",
+          "Essmobile App"
+        ],
+        "BUTTON": "Buy Now"
       },
+      "STARTER": {
+        "TITLE": "Starter Package",
+        "EMPLOYEES": "50 employee",
+        "PRICE": "$120",
+        "FEATURES": [
+          "Employee",
+          "Time Sheet",
+          "Vacations",
+          "Payroll",
+          "Essmobile App"
+        ],
+        "BUTTON": "Buy Now"
+      },
+      "MEDIUM": {
+        "TITLE": "Medium Package",
+        "EMPLOYEES": "100 employee",
+        "PRICE": "$200",
+        "FEATURES": [
+          "Employee",
+          "Time Sheet",
+          "Vacations",
+          "Payroll",
+          "Essmobile App"
+        ],
+        "BUTTON": "Buy Now"
+      },
+      "PREMIUM": {
+        "TITLE": "Premium Package",
+        "EMPLOYEES": "+100 employee",
+        "PRICE": "$....",
+        "FEATURES": [
+          "Employee",
+          "Time Sheet",
+          "Vacations",
+          "Payroll",
+          "Essmobile App"
+        ],
+        "BUTTON": "Contact Us"
+      }
+    }
+  },
 
-    
+  "CONTACT": {
+    "HEADING1": "Feel free to",
+    "HEADING2": "Contact",
+
+    "HEADING3": " us",
+
+    "ADDRESS": "Linked Gates",
+    "PHONE": "+201097755177",
+    "EMAIL": "sales@hrklix.com",
+    "FORM": {
+      "NAME": "Name",
+      "SURNAME": "Surname",
+      "EMAIL": "Your Email",
+      "WEBSITE": "Your Website URL",
+      "SUBMIT": "Submit Request"
+    }
+  },
+
   "FOOTER": {
     "EMAIL": "sales@hrklix.com",
     "SERVICES": {
-      "TITLE":"Services",
+      "TITLE": "Services",
       "SEO": "SEO Development",
       "BUSINESS": "Business Growth",
       "SOCIAL_MEDIA": "Social Media Management",
       "WEBSITE_OPT": "Website Optimization"
     },
     "COMMUNITY": {
-      "TITLE":"Community",
+      "TITLE": "Community",
       "DIGITAL_MARKETING": "Digital Marketing",
       "BUSINESS_IDEAS": "Business Ideas",
       "WEBSITE_CHECKUP": "Website Checkup",
       "PAGE_SPEED_TEST": "Page Speed Test"
+    },
+    "USEFULlINKS": {
+      "TITLE": "Useful Links",
+      "terms": "Terms & Conditions",
+      "privacy": "Privacy Policy"
     },
     "SUBSCRIBE": {
       "TITLE": "Subscribe Newsletters",
       "TEXT": "Get our latest news and ideas to your inbox",
       "EMAIL_PLACEHOLDER": "Your Email"
     },
-    "COPYRIGHT": "HRKLIX"
+    "COPYRIGHT": "HRKLIX © 2025. All rights reserved"
   }
 }

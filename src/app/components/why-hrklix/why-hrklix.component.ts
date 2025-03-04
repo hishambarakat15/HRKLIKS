@@ -16,7 +16,7 @@ export class WhyHrklixComponent {
   customOptions: OwlOptions = {
     items: 1,
     loop: true,
-    dots: false,
+    dots: true,
     nav: false,
     autoplay: true,
     margin: 0,

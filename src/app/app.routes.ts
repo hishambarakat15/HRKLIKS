@@ -9,6 +9,8 @@ import { OurSoftwareComponent } from './components/our-software/our-software.com
 import { ServiceComponent } from './components/service/service.component';
 import { WhyHrklixComponent } from './components/why-hrklix/why-hrklix.component';
 import { PricingComponent } from './components/pricing/pricing.component';
+import { TermsComponent } from './components/terms/terms.component';
+import { PrivacyComponent } from './components/privacy/privacy.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -22,6 +24,8 @@ export const routes: Routes = [
   { path: 'ContactUs', component: ContactUsComponent },
   { path: 'LogIn', component: LogInComponent },
   { path: 'pricing', component: PricingComponent },
+  { path: 'terms', component: TermsComponent },
+  { path: 'privacy', component: PrivacyComponent },
 
   { path: '**', component: NotFoundComponent },
 ];

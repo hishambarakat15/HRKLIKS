@@ -1,0 +1,31 @@
+<div class="container text-center modules">
+    <div class="row">
+        <div class="col-12 title">
+            <h2>HRKLIX <span>{{'navbar.Services'|translate}}</span>
+            </h2>
+        </div>
+        <div class="col-12 mt-5 ">
+            <owl-carousel-o [options]="customOptions" class="px-0">
+                <ng-template carouselSlide>
+                  <div class="text-center">
+                    <h2> {{'MODULES.EM_TITLE'|translate}} </h2>
+                    <p class="mt-3"> {{'MODULES.EM_DESCRIPTION'|translate}} </p>
+                 <img class="img-fluid" src="../../../assets/images/EmployeeManagement.svg" alt="Employee Management">
+                  </div></ng-template>  
+                <ng-template carouselSlide>
+                  <div class="text-center">
+                    <h2>{{'MODULES.AT_TITLE'|translate}}                </h2>
+                    <p class="mt-3">{{'MODULES.AT_DESCRIPTION'|translate}} </p>
+                 <img class="img-fluid" src="../../../assets/images/Attendance.svg" alt="Employee Management">
+                  </div></ng-template>  
+                <ng-template carouselSlide>
+                  <div class="text-center">
+                    <h2>{{'MODULES.PR_TITLE'|translate}}                         </h2>
+                    <p class="mt-3">{{'MODULES.PR_DESCRIPTION'|translate}}     </p>
+                 <img class="img-fluid" src="../../../assets/images/Payroll.svg" alt="Employee Management">
+                  </div></ng-template>  
+                
+              </owl-carousel-o>
+
+        </div>
+</div>

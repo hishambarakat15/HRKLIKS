@@ -51,10 +51,14 @@ this.isloading=true;
 
   this._httpService.createTenant(this.logInForm.value).subscribe(
     (res) => {
-      this.messageService.add({ severity: 'success', summary: 'Success', detail: res });
-      this.visible = true; 
+      this.messageService.add({
+        severity: 'success',
+        summary: 'Success',
+        detail: res,
+      });
+      // this.visible = true;
       this.logInForm.reset();
-      this.isloading=false;
+      this.isloading = false;
     }
   );
 

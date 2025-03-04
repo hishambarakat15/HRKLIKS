@@ -11,14 +11,25 @@ import { VidieoComponent } from "../video/vidieo.component";
 import { VideoComponent } from "../video/video.component";
 import { ContactUsComponent } from "../contact-us/contact-us.component";
 import { TranslateModule } from '@ngx-translate/core';
+import { ModulesComponent } from '../modules/modules.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [WhyHrklixComponent, ServiceComponent, OurSoftwareComponent, MobilAppComponent, ActionsComponent, ClientsComponent, CompaniesComponent, PricingComponent, ContactUsComponent,TranslateModule],
+  imports: [
+    WhyHrklixComponent,
+    ServiceComponent,
+    OurSoftwareComponent,
+    MobilAppComponent,
+    ActionsComponent,
+    ClientsComponent,
+    CompaniesComponent,
+    PricingComponent,
+    ContactUsComponent,
+    TranslateModule,
+    ModulesComponent,
+  ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
-export class HomeComponent {
-
-}
+export class HomeComponent {}
