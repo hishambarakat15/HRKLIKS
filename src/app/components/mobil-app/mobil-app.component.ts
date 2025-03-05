@@ -1,6 +1,6 @@
 import { NgClass, NgForOf } from '@angular/common';
 import { Component } from '@angular/core';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
 
 @Component({
@@ -11,6 +11,8 @@ import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
   styleUrl: './mobil-app.component.scss',
 })
 export class MobilAppComponent {
+  isRTL: boolean = false; // Default to LTR
+
   carouselOptions = {
     loop: true,
     margin: 10,
@@ -40,4 +42,19 @@ export class MobilAppComponent {
     '../../../assets/images/slider4.jpeg',
     '../../../assets/images/slider5.jpeg',
   ];
+
+  constructor(private translateService: TranslateService) {
+    this.translateService.onLangChange.subscribe((event) => {
+      this.isRTL = event.lang === 'ar'; // إذا كانت العربية، فعّل RTL
+      this.updateCarouselOptions();
+    });
+
+    // التحقق من اللغة عند بدء التشغيل
+    this.isRTL = this.translateService.currentLang === 'ar';
+    this.updateCarouselOptions();
+  }
+
+  private updateCarouselOptions(): void {
+    this.carouselOptions = { ...this.carouselOptions, rtl: this.isRTL };
+  }
 }
