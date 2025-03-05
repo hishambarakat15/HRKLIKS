@@ -113,14 +113,38 @@ body {
   cursor: pointer;
 }
 
-.navbar-fixed {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1030; /* Keeps the navbar on top of other elements */
-  transition: all 0.3s ease-in-out; /* Smooth transition for height and background color */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow for better visibility */
+
+  .navbar-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1030; /* Keeps the navbar on top of other elements */
+    transition: all 0.3s ease-in-out; /* Smooth transition for height and background color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow for better visibility */
+  
+  
+}
+// in mobile screens media queries
+@media (max-width: 768px) {
+  html:dir(rtl) {
+    .navbar-fixed {
+     position: inherit !important;
+    
+    }
+  }
+  html:dir(ltr) {
+    .navbar-fixed {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1030; /* Keeps the navbar on top of other elements */
+      transition: all 0.3s ease-in-out; /* Smooth transition for height and background color */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow for better visibility */
+    
+    }
+  }
 
 }
 .main-nav{
@@ -2279,14 +2303,19 @@ footer .footer-item form input::placeholder {
 
 footer .footer-item form button {
   position: absolute;
-  right: 20px;
+  left:20px ;
   top: 10px;
   color: #fff;
   background-color: transparent;
   border: none;
   outline: none;
-}
 
+  
+}
+html:dir(ltr) footer .footer-item form button {
+  right: 20px !important;
+  left: auto !important;
+}
 footer .copyright p {
   text-align: center;
   border-top: 1px solid #eee;

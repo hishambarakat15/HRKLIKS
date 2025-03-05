@@ -43,3 +43,20 @@
       margin-right: 3rem;
     }
   }
+
+
+  ::ng-deep{
+    .fixed-top {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1030;
+      
+        /* تغيير الهوامش حسب اللغة */
+        [dir="rtl"] & {
+          right: 0;
+          left: auto;
+        }
+      }
+  }
