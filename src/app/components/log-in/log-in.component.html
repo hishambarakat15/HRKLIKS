@@ -153,7 +153,7 @@
           <div class="row">
             <div class="col-lg-5">
               <select
-                class="form-control font-size-11 mb-3 cr h-50 pt-1"
+                class="form-control font-size-11 mb-3 cr  pt-1"
                 formControlName="countryCode"
               >
                 <option value="" >{{ 'LogIn.FORM.COUNTRY-CODE' | translate }}</option>
@@ -185,20 +185,21 @@
                 'is-valid': !logInForm.get('phoneNo')?.errors && (logInForm.get('phoneNo')?.touched ||logInForm.get('phoneNo')?.dirty),
                 'is-invalid':logInForm.get('phoneNo')?.errors && (logInForm.get('phoneNo')?.touched ||logInForm.get('phoneNo')?.dirty) 
             }">
-            @if (logInForm.get('phoneNo')?.errors && logInForm.get('phoneNo')?.touched) 
-            {
-            <div class="alert alert-danger">
-               
-                    @if (logInForm.get('phoneNo')?.getError('required')) {
-                        <p>{{ 'LogIn.FORM.VALIDATION_PN_ISREQUITRED' | translate }}</p>
-                    }
-                    @else if (logInForm.get('phoneNo')?.getError('pattern')) {
-                        <p>{{ 'LogIn.FORM.VALIDATION_PN_ISVALID' | translate }}</p>
-                    }
-
-            </div>
-        }
+       
           </div>
+          @if (logInForm.get('phoneNo')?.errors && logInForm.get('phoneNo')?.touched) 
+          {
+          <div class="alert alert-danger">
+             
+                  @if (logInForm.get('phoneNo')?.getError('required')) {
+                      <p>{{ 'LogIn.FORM.VALIDATION_PN_ISREQUITRED' | translate }}</p>
+                  }
+                  @else if (logInForm.get('phoneNo')?.getError('pattern')) {
+                      <p>{{ 'LogIn.FORM.VALIDATION_PN_ISVALID' | translate }}</p>
+                  }
+
+          </div>
+      }
 
           </div>
           

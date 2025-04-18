@@ -41,11 +41,13 @@ export class ContactUsComponent {
       '',
       [Validators.required, Validators.pattern(/^01[0125][0-9]{8}$/)],
     ],
-    // CountryCode: ['', []],
+    CountryCode: ['', [Validators.required]],
     subject: ['', [Validators.required]],
   });
 
   contactUsSubmit(): void {
+    this.isloading = true;
+
     const payload = {
       Name:
         this.contactUsForm.value.FirstName +

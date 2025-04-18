@@ -6,7 +6,7 @@ import { map, Observable } from "rxjs";
   providedIn: 'root',
 })
 export class HttpService {
-  private baseUrl = 'http://services.hrklix.com/';
+  private baseUrl = 'https://services.hrklix.com/';
 
   private readonly _httpClient = inject(HttpClient);
 
@@ -32,12 +32,8 @@ export class HttpService {
   }
 
   createSubscription(payload: any): Observable<string> {
-    return this._httpClient.post(
-      `${this.baseUrl}tenant/Subscribe`,
-      payload,
-      {
-        responseType: 'text',
-      }
-    );
+    return this._httpClient.post(`${this.baseUrl}tenant/Subscribe`, payload, {
+      responseType: 'text',
+    });
   }
 }

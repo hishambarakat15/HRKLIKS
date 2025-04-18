@@ -14,7 +14,6 @@ import { PrivacyComponent } from './components/privacy/privacy.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
-
   { path: 'home', component: HomeComponent },
   { path: 'OurSoftware', component: OurSoftwareComponent },
   { path: 'Service', component: ServiceComponent },

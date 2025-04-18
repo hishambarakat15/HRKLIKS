@@ -62,11 +62,17 @@ figure, header, nav, section, article, aside, footer, figcaption {
 .logo{
     max-width: 48px;;
     padding: 0;
+    margin: 0 10px;
     // media queries for larger  screens only
     @media (min-width: 1200px) {
       max-width: 60px;;
 
     }
+}
+nav{
+  .container-fluid{
+    padding: 0px !important;
+  }
 }
 .logo .logo-img{
   width:100%;
@@ -113,6 +119,9 @@ body {
   cursor: pointer;
 }
 
+.navbar{
+  --bs-navbar-padding-x : 0.5rem;
+}
 
   .navbar-fixed {
     position: fixed;
@@ -127,13 +136,13 @@ body {
 }
 // in mobile screens media queries
 @media (max-width: 768px) {
-  html:dir(rtl) {
+  html[dir="rtl"] {
     .navbar-fixed {
-     position: inherit !important;
+    //  position: inherit !important;
     
     }
   }
-  html:dir(ltr) {
+  html[dir="ltr"] {
     .navbar-fixed {
       position: fixed;
       top: 0;
@@ -158,6 +167,7 @@ nav.main-nav.scrolled {
 
 /* Add padding to the top of the body or the first section to prevent overlap */
 body {
+  // padding-top: 70px; /* Adjust this value based on your navbar's height */
 }
 .icon {
   font-size: 50px;
@@ -528,10 +538,13 @@ header
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
-  line-height: 10px;
+  // line-height: 10px;
   border: transparent;
   padding: 30px 0 0;
-  letter-spacing: 1px;
+  // letter-spacing: 1px;
+  @media (max-width: 991.98px) {
+    padding: .75rem 1.5rem  !important;
+  }
 }
 
 // .header-area .main-nav .nav li a {
@@ -1249,6 +1262,11 @@ Services Style
   top: -140px;
   position: absolute;
   z-index: 1;
+
+  @media (max-width: 991.98px) {
+    left: 0px !important;
+  }
+
 }
 
 .our-services .services-right-dec img {
@@ -2068,6 +2086,9 @@ contact
   height: 702px;
   right: 0;
   bottom: -400px;
+  @media (max-width: 991.98px) {
+    display: none !important;
+  }
 }
 
 .contact-left-dec img {
@@ -2311,7 +2332,7 @@ footer .footer-item form button {
 
   
 }
-html:dir(ltr) footer .footer-item form button {
+html[dir="ltr"] footer .footer-item form button {
   right: 20px !important;
   left: auto !important;
 }

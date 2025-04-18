@@ -2,9 +2,9 @@
   <div id="contact" class="contact-us section">
     <div class="container">
       <div class="row">
-        <div class="col-lg-7">
+        <div class="col-lg-7 order-2 order-lg-1 mt-5 mt-lg-0">
           <div class="section-heading">
-            <h2>{{ 'CONTACT.HEADING1' | translate }} <em>{{ 'CONTACT.HEADING2' | translate }} </em> {{ 'CONTACT.HEADING3' | translate }} </h2>
+            <h2 class="d-none d-lg-block">{{ 'CONTACT.HEADING1' | translate }} <em>{{ 'CONTACT.HEADING2' | translate }} </em> {{ 'CONTACT.HEADING3' | translate }} </h2>
             <div id="map">
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d215.82395324863862!2d31.358645611145395!3d30.06028129189551!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583db3e97ba115%3A0x7363b6c8dd93a7c7!2sLinked%20Gates!5e0!3m2!1sar!2seg!4v1648386735275!5m2!1sar!2seg" width="100%" height="400px" style="border:0;" allowfullscreen=""></iframe>
             </div>
@@ -14,7 +14,12 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-5 align-self-center">
+        <div class="col-lg-5 align-self-center order-1 order-lg-2">
+          <div class="section-heading"> 
+            
+          <h2 class="d-block d-lg-none">{{ 'CONTACT.HEADING1' | translate }} <em>{{ 'CONTACT.HEADING2' | translate }} </em> {{ 'CONTACT.HEADING3' | translate }} </h2>
+          </div>
+
           <form [formGroup]="contactUsForm" (ngSubmit)="contactUsSubmit()" id="contact">
             <div class="row">
               <div class="col-md-6">
@@ -117,9 +122,9 @@
                   
               </div>
             <div class="row">
-              <!-- <div class="col-lg-5">
+              <div class="col-lg-5">
                 <select
-                  class="form-control font-size-11 mb-3 cr h-50 pt-1"
+                  class="form-control font-size-11 mb-3 cr pt-1"
                   formControlName="CountryCode"
                 >
                   <option value="" >{{ 'LogIn.FORM.COUNTRY-CODE' | translate }}</option>
@@ -143,28 +148,29 @@
                   <option value="+967">Yemen (+967)</option>
                   <option value="+973">Bahrain (+973)</option>
                 </select>
-            </div> -->
-              <div class="col-lg-12">
+            </div>
+              <div class="col-lg-7">
                 <input type="tel" name="phone"  id="phone"
                  formControlName="PhoneNumber"
                 [placeholder]="'LogIn.FORM.PHONE-NUMBER' | translate" autocomplete="on"  [ngClass]="{
                   'is-valid': !contactUsForm.get('PhoneNumber')?.errors && (contactUsForm.get('PhoneNumber')?.touched ||contactUsForm.get('PhoneNumber')?.dirty),
                   'is-invalid':contactUsForm.get('PhoneNumber')?.errors && (contactUsForm.get('PhoneNumber')?.touched ||contactUsForm.get('PhoneNumber')?.dirty) 
               }">
-              @if (contactUsForm.get('PhoneNumber')?.errors && contactUsForm.get('PhoneNumber')?.touched) 
-              {
-              <div class="alert alert-danger">
-                 
-                      @if (contactUsForm.get('PhoneNumber')?.getError('required')) {
-                        <p>{{ 'LogIn.FORM.VALIDATION_PN_ISREQUITRED' | translate }}</p>
-                      }
-                      @else if (contactUsForm.get('PhoneNumber')?.getError('pattern')) {
-                        <p>{{ 'LogIn.FORM.VALIDATION_PN_ISVALID' | translate }}</p>
-                      }
-  
-              </div>
-          }
+        
             </div>
+            @if (contactUsForm.get('PhoneNumber')?.errors && contactUsForm.get('PhoneNumber')?.touched) 
+            {
+            <div class="alert alert-danger">
+               
+                    @if (contactUsForm.get('PhoneNumber')?.getError('required')) {
+                      <p>{{ 'LogIn.FORM.VALIDATION_PN_ISREQUITRED' | translate }}</p>
+                    }
+                    @else if (contactUsForm.get('PhoneNumber')?.getError('pattern')) {
+                      <p>{{ 'LogIn.FORM.VALIDATION_PN_ISVALID' | translate }}</p>
+                    }
+
+            </div>
+        }
   
             </div>
 
